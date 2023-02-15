@@ -7,9 +7,9 @@
         </div>
         <div class="col-lg-8 text-end my-auto fw-semibold">
             <p>Belum mempunyai akun?
-                {{-- @if (Route::has('register'))
+                @if (Route::has('register'))
                 <a href="{{ route('register') }}" class="text-decoration-none">Daftar</a>
-            @endif --}}
+            @endif
             </p>
         </div>
     </div>
