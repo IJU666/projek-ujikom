@@ -127,8 +127,7 @@
                       </div>
                   </form>
               </div>
-              <p class=" text-center fw-semibold">Sudah mempunyai akun?<a href="{{ route('login') }}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="mx-1 text-decoration-none">Masuk</a></p>
-              @include('layout.masuk')
+              <p class=" text-center fw-semibold">Sudah mempunyai akun?<a href="{{ route('login') }}" class="mx-1 text-decoration-none">Masuk</a></p>
           </div>
         </div>
       </div>
