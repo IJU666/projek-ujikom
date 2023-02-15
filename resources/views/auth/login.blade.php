@@ -6,11 +6,15 @@
         <img src="img/logo.png" class="img-fluid" width="50px" alt="">
         </div>
         <div class="col-lg-8 text-end my-auto fw-semibold">
-            <p>Belum mempunyai akun?<a href="" class="text-decoration-none"> Daftar</a></p>
+            <p>Belum mempunyai akun?
+                {{-- @if (Route::has('register'))
+                <a href="{{ route('register') }}" class="text-decoration-none">Daftar</a>
+            @endif --}}
+            </p>
         </div>
     </div>
     <div class="card-body">
-        <h4 class="text-bold text-center mb-5"><b> Selamat Datang</b></h4>
+        <h4 class="text-bold text-center mb-5"><b> Selamat Siang</b></h4>
 
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />

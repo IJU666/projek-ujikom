@@ -29,13 +29,13 @@
     <form action="" method="post">
         <div class="row col-lg-12 mx-auto">
         <div class="form-check d-inline col-lg-5 p-2 rounded-2" style="background-color: #F5F5F5;">
-            <input class="form-check-input mx-auto" type="radio" name="pengaduan" id="exampleRadios1" value="option1" checked>
+            <input class="form-check-input mx-auto" type="radio" name="pengaduan" id="exampleRadios1">
             <label class="form-check-label ms-1" for="exampleRadios1">
               Pengaduan
             </label>
           </div>
           <div class="form-check d-inline col-lg-5 ms-2 p-2 justify-content-center rounded-2" style="background-color: #F5F5F5;">
-            <input class="form-check-input mx-auto" type="radio" name="aspirasi" id="exampleRadios2" value="option2">
+            <input class="form-check-input mx-auto" type="radio" name="aspirasi" id="exampleRadios2">
             <label class="form-check-label ms-1" for="exampleRadios2">
               Aspirasi
             </label>

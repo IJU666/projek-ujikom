@@ -3,7 +3,7 @@
 <div class="card mb-3 col-lg-10 mx-auto mt-3 " >
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="img/daftar.png" class="img-fluid rounded-start" alt="..." style="height: 105vh;">
+      <img src="img/daftar.png" class="img-fluid rounded-start" alt="..." style="height: 100vh;">
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -16,7 +16,7 @@
                         <div class="row mx-auto">
                             <div class="col-lg-6">
                                 <label for="nama" class="form-text">Nama Lengkap</label>
-                                <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukan Nama Lengkap" required>
+                                <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukan Nama Lengkap" required autofocus>
                             </div>
                             <div class="col-lg-6">
                                 <label for="nik" class="form-text">Nomor Induk Kependudukan (NIK)</label>
@@ -42,30 +42,6 @@
                                 <label for="pekerjaan" class="form-text">Pekerjaan</label>
                                 <input type="text" name="pekerjaan" id="pekerjaan" class="form-control col-lg-5" placeholder="Masukan Pekerjaan" required>
                             </div>
-                            <div class="col-lg-3">
-                                <label for="alamat" class="form-text">Alamat</label>
-                                <select name="alamat" id="alamat" class="form-select">
-                                    <option selected>Provinsi</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-3">
-                                <label for="alamat" class="form-text"></label>
-                                <select name="alamat" id="alamat" class="form-select">
-                                    <option selected>Kabupaten</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-3">
-                                <label for="alamat" class="form-text"></label>
-                                <select name="alamat" id="alamat" class="form-select">
-                                    <option selected>Kecamatan</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-3">
-                                <label for="alamat" class="form-text"></label>
-                                <select name="alamat" id="alamat" class="form-select">
-                                    <option selected>Desa</option>
-                                </select>
-                            </div>
                             <div class="col-lg-6 my-2">
                                 <label for="username" class="form-text">Nama Pengguna</label>
                                 <input type="text" name="username" id="username" class="form-control" placeholder="Masukan Nama Pengguna" required>
@@ -88,7 +64,7 @@
                                   Data yang dimasukan sudah sesuai dengan data diri
                                 </label>
                               </div>
-                            <button value="submit" name="submit" class="col-lg-5 mx-auto btn btn-primary mt-3">Buat Akun</button>
+                            <button value="submit" name="submit" class="col-lg-5 mx-auto btn btn-primary mt-4">Buat Akun</button>
                         </div>
                     </div>
                 </form>

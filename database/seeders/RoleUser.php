@@ -35,21 +35,20 @@ class RoleUser extends Seeder
                 'name' => 'petugas'
             ], $default_user_value));
 
-            $role = Role::create([ 'name' => 'admin']);
-            $role = Role::create([ 'name' => 'petugas']);
+            $role = Role::create(['name' => 'admin']);
+            $role = Role::create(['name' => 'petugas']);
 
-            $permission = Permission::create([ 'name' =>'read role']);
-            $permission = Permission::create([ 'name' =>'create role']);
-            $permission = Permission::create([ 'name' =>'update role']);
-            $permission = Permission::create([ 'name' =>'delete role']);
+            $permission = Permission::create(['name' => 'read role']);
+            $permission = Permission::create(['name' => 'create role']);
+            $permission = Permission::create(['name' => 'update role']);
+            $permission = Permission::create(['name' => 'delete role']);
 
-            $admin -> assignRole('admin');
-            $admin -> assignRole('petugas');
+            $admin->assignRole('admin');
+            $petugas->assignRole('petugas');
 
             DB::commit();
         } catch (\Throwable $th) {
             DB::rollBack();
         }
-
     }
 }
