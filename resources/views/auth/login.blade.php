@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="card-body">
-        <h4 class="text-bold text-center mb-5"><b> Selamat Siang</b></h4>
+        <h4 class="text-bold text-center mb-5"><b> Selamat Datang</b></h4>
 
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />

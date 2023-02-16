@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </form>
-            <div class="rounded-3 mt-4 py-3 shadow shadow-md" style="background-color: #f3f3f3;">
+            <div class="rounded-3 mt-4 py-3 shadow" style="background-color: #f3f3f3;">
                 <table class="table table-striped">
                     <thead>
                       <tr class="">
@@ -37,8 +37,9 @@
                         <th scope="col">Isi Laporan</th>
                         <th scope="col">Alamat</th>
                         <th scope="col">Tanggal</th>
+                        <th scope="col">Asal Pelapor</th>
                         <th scope="col">Lampiran</th>
-                        <th scope="col" colspan="2" class="text-center">Aksi</th>
+                        <th scope="col" colspan="2">Aksi</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -49,15 +50,14 @@
                         <td>{{ $pengaduan->isi }}</td>
                         <td>{{ $pengaduan->alamat }}</td>
                         <td>{{ $pengaduan->tglpengaduan }}</td>
+                        <td>{{ $pengaduan->kirim }}</td>
+                        <td>{{ $pengaduan->lampiran }}</td>
                         <td></td>
                         <td class="col-1">
-                            <button class="btn btn-primary col-9 float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                            <a class="btn btn-primary col-9 " href="{{ $pengaduan->id }}" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                                 <i class="fa-solid fa-eye"></i>
-                              </button>
+                            </a>
                         </td>
-                        @hasanyrole('admin|petugas')
-                        <td class="col-1"><a href="" class="btn btn-danger col-9"><i class="fa-solid fa-trash"></i></a></td>
-                        @endhasanyrole
                       </tr>
                     @endif
                     @endforeach

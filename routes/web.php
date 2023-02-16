@@ -4,6 +4,7 @@ use App\Http\Controllers\LoginController;
 use App\Models\Pengaduan;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PengaduanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +17,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landingpage', [
-        "title" => "Landing Page"
-    ]);
-});
+// Route::get('/', function () {
+//     return view('landingpage', [
+//         "title" => "Landing Page"
+//     ]);
+// });
+
+Route::get('/', [PengaduanController::class, 'index']);
+Route::get('/beranda', [PengaduanController::class, 'create']);
+Route::post('/store', [PengaduanController::class, 'store']);
+Route::post('/show{id}', [PengaduanController::class, 'show']);
+Route::post('/destroy{id}', [PengaduanController::class, 'destroy']);
+
 
 Route::get('/daftar', function () {
     return view('daftar');
@@ -37,19 +45,15 @@ Route::get('/pengaduan', function () {
         "title" => "Pengaduan",
         'pengaduans' => Pengaduan::all()
     ]);
-
 })->middleware(['auth'])->name('pengaduan');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 Route::get('/pengguna', function () {
     return view('data.pengguna', [
         "title" => "Pengguna",
         'users' => User::all()
     ]);
-
 })->middleware(['auth'])->name('pengguna');
 
-require __DIR__.'/auth.php';
-
-
+require __DIR__ . '/auth.php';

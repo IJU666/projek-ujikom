@@ -26,26 +26,22 @@
 </div>
 <div class="col-lg-4 mt-5 mx-auto">
     <p><small>Pilih Klasifikasi Laporan</small></p>
-    <form action="" method="post">
+    <form action="{{ url('/store') }}" method="POST" enctype="multipart/form-data">
+        @csrf
         <div class="row col-lg-12 mx-auto">
         <div class="form-check d-inline col-lg-5 p-2 rounded-2" style="background-color: #F5F5F5;">
-            <input class="form-check-input mx-auto" type="radio" name="pengaduan" id="exampleRadios1">
+            <input class="form-check-input mx-auto" type="radio" name="jenis" id="exampleRadios1" value="Pengaduan">
             <label class="form-check-label ms-1" for="exampleRadios1">
               Pengaduan
             </label>
           </div>
           <div class="form-check d-inline col-lg-5 ms-2 p-2 justify-content-center rounded-2" style="background-color: #F5F5F5;">
-            <input class="form-check-input mx-auto" type="radio" name="aspirasi" id="exampleRadios2">
+            <input class="form-check-input mx-auto" type="radio" name="jenis" id="exampleRadios2" value="Aspirasi">
             <label class="form-check-label ms-1" for="exampleRadios2">
               Aspirasi
             </label>
           </div>
         </div>
-        {{-- alert --}}
-        <div id="liveAlertPlaceholder" class="my-2">
-
-        </div>
-        {{-- alert --}}
         </div>
         <div class="rounded-3 col-lg-10 mx-auto mt-5 pt-5 pb-3 shadow shadow-3" style="background-color: #F5F5F5;">
             <div class="form-floating col-lg-10 mx-auto mb-3">
@@ -66,7 +62,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 mt-4 border mx-auto">
-                    <button type="button" class="btn btn-outline-primary col-lg-12" id="liveAlertBtn">Kirim</button>
+                <button type="submit" class="btn btn-outline-primary col-lg-12">Kirim</button>
             </div>
               </div>
         </div>
