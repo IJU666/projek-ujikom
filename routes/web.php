@@ -15,11 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('landingpage');
+    return view('landingpage', [
+        "title" => "Landing Page"
+    ]);
 });
 
 Route::get('/daftar', function () {
     return view('daftar');
+});
+
+Route::get('/tentangaspera', function () {
+    return view('tentangaspera', [
+        "title" => "Tentang Aspera"
+    ]);
 });
 
 Route::get('/pengaduan', function () {

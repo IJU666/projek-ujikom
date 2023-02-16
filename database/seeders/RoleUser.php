@@ -27,28 +27,53 @@ class RoleUser extends Seeder
         DB::beginTransaction();
         try {
             $admin = User::create(array_merge([
-                'email' => 'admin@gmail.com',
-                'name' => 'admin'
+                'name' => 'admin',
+                'nik' => '1',
+                'tglahir' => '2023-02-15',
+                'jk' => 'Laki-laki',
+                'notelp' => '1',
+                'pekerjaan' => 'admin',
+                'username' => 'admin',
+                'email' => 'admin@gmail.com'
             ], $default_user_value));
             $petugas = User::create(array_merge([
-                'email' => 'petugas@gmail.com',
-                'name' => 'petugas'
+                'name' => 'petugas',
+                'nik' => '2',
+                'tglahir' => '2023-02-15',
+                'jk' => 'Laki-laki',
+                'notelp' => '2',
+                'pekerjaan' => 'petugas',
+                'username' => 'petugas',
+                'email' => 'petugas@gmail.com'
+            ], $default_user_value));
+            $masyarakat = User::create(array_merge([
+                'name' => 'masyarakat',
+                'nik' => '3',
+                'tglahir' => '2023-02-15',
+                'jk' => 'Laki-laki',
+                'notelp' => '3',
+                'pekerjaan' => 'masyarakat',
+                'username' => 'masyarakat',
+                'email' => 'masyarakat@gmail.com'
             ], $default_user_value));
 
-            $role = Role::create(['name' => 'admin']);
-            $role = Role::create(['name' => 'petugas']);
+            $role = Role::create([ 'name' => 'admin']);
+            $role = Role::create([ 'name' => 'petugas']);
+            $role = Role::create([ 'name' => 'masyarakat']);
 
-            $permission = Permission::create(['name' => 'read role']);
-            $permission = Permission::create(['name' => 'create role']);
-            $permission = Permission::create(['name' => 'update role']);
-            $permission = Permission::create(['name' => 'delete role']);
+            $permission = Permission::create([ 'name' =>'read role']);
+            $permission = Permission::create([ 'name' =>'create role']);
+            $permission = Permission::create([ 'name' =>'update role']);
+            $permission = Permission::create([ 'name' =>'delete role']);
 
-            $admin->assignRole('admin');
-            $petugas->assignRole('petugas');
+            $admin -> assignRole('admin');
+            $petugas -> assignRole('petugas');
+            $masyarakat -> assignRole('masyarakat');
 
             DB::commit();
         } catch (\Throwable $th) {
             DB::rollBack();
         }
+
     }
 }

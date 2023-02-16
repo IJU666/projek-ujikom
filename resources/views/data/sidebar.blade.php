@@ -38,14 +38,6 @@
             </li>
             @endhasrole
         </ul>
-        {{-- <ul class="menu float-bottom">
-            <li class="sidebar-item">
-                <a href="" class='sidebar-link' onclick="return confirm('Yakin untuk meninggalkan halaman?');">
-                    <i class="bi bi-door-open-fill"></i>
-                    <span>Keluar</span>
-                </a>
-            </li>
-        </ul> --}}
         <ul class="menu float-bottom">
         <form method="POST" action="{{ route('logout') }}">
             @csrf
