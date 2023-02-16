@@ -77,7 +77,7 @@
     </section>
 </div>
 
-@include('data.offcanvas')
+@include('data.offcanvas-pengguna')
 
             <footer class="">
 

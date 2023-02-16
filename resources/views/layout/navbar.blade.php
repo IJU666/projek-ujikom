@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-lg bg-body-light">
     <div class="container-fluid p-0 container col-10">
       <a class="navbar-brand p-0 {{ ($title === "Landing Page") ? 'active' : ''  }}" href="/">
+        <div class="">
         <img src="img/logo.png" class="" alt="" width="50">
+        </div>
         </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -18,7 +20,7 @@
           @if (Route::has('login'))
           <div class="hidden fixed top-0 right-0 px-6 sm:block">
               @auth
-                  <form method="POST" action="{{ route('logout') }}" class="btn btn-danger">
+                  <form method="POST" action="{{ route('logout') }}" class="btn btn-danger my-auto">
                     @csrf
 
                     <x-responsive-nav-link :href="route('logout')"
