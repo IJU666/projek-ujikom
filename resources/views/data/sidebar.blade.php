@@ -47,7 +47,7 @@
                                 this.closest('form').submit();">
                                 <li class="sidebar-item">
                                 <li class="sidebar-link">
-                    <i class="bi bi-door-open-fill"></i>
+                            <i class="fa-solid fa-door-open"></i>
                     <span class="">
                 {{ __('Keluar') }}
             </span>

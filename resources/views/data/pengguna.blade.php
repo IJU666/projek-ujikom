@@ -21,7 +21,7 @@
                         <input type="text" name="cari" id="" placeholder="Masukan Nama Pengguna" class="form-control">
                     </div>
                     <div class="col-lg-5">
-                        <button type="submit" name="submit" class="btn btn-primary m-0 col-lg-2"><i class="bi bi-search my-auto"></i></button>
+                        <button type="submit" name="submit" class="btn btn-primary m-0 col-lg-2"><i class="fa-solid fa-magnifying-glass my-auto"></i></button>
                     </div>
                     <div class="col-lg-3">
                        <!-- Button trigger modal -->
@@ -54,11 +54,11 @@
                         <td>Jalan pochinok duwar</td>
                         <td>08986283764</td>
                         <td class="col-1">
-                            <button class="btn btn-primary col-9" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                                <i class="bi bi-pencil-square"></i>
+                            <button class="btn btn-primary col-9 float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                                <i class="fa-solid fa-pen-to-square"></i>
                               </button>
                         </td>
-                        <td class="col-1"><a href="" class="btn btn-danger col-9 mx-auto"><i class="bi bi-trash3"></i></a></td>
+                        <td class="col-1"><a href="" class="btn btn-danger col-9 mx-auto"><i class="fa-solid fa-trash"></i></a></td>
                       </tr>
 
                       {{-- useless --}}
@@ -69,10 +69,10 @@
                         <td>@fat</td>
                         <td>cinta sementara, epep selamanya</td>
                         <td>08238623223</td>
-                        <td class="col-1"> <button class="btn btn-primary col-9" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                            <i class="bi bi-pencil-square"></i>
+                        <td class="col-1"> <button class="btn btn-primary col-9 float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                            <i class="fa-solid fa-pen-to-square"></i>
                           </button></td>
-                        <td class="col-1"><a href="" class="btn btn-danger col-9"><i class="bi bi-trash3"></i></a></td>
+                        <td class="col-1"><a href="" class="btn btn-danger col-9"><i class="fa-solid fa-trash"></i></a></td>
                       </tr>
                       <tr>
                         <th scope="row">3</th>
@@ -80,10 +80,10 @@
                         <td>@twitter</td>
                         <td>epep selamanya</td>
                         <td>08238623223</td>
-                        <td class="col-1"> <button class="btn btn-primary col-9" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                            <i class="bi bi-pencil-square"></i>
+                        <td class="col-1"> <button class="btn btn-primary col-9 float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                            <i class="fa-solid fa-pen-to-square"></i>
                           </button></td>
-                        <td class="col-1"><a href="" class="btn btn-danger col-9"><i class="bi bi-trash3"></i></a></td>
+                        <td class="col-1"><a href="" class="btn btn-danger col-9"><i class="fa-solid fa-trash"></i></a></td>
                       </tr>
                       {{-- useless --}}
                     </tbody>
