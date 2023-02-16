@@ -21,7 +21,7 @@
                         <input type="text" name="cari" id="" placeholder="Masukan Nama Pengguna" class="form-control">
                     </div>
                     <div class="col-lg-5">
-                        <button type="submit" name="submit" class="btn btn-primary m-0 col-lg-2"><i class="bi bi-search my-auto"></i></button>
+                        <button type="submit" name="submit" class="btn btn-primary m-0 col-lg-2"><i class="fa-solid fa-magnifying-glass my-auto"></i></i></button>
                     </div>
                     <div class="col-lg-3">
                        <!-- Button trigger modal -->
@@ -60,10 +60,10 @@
                     <td>{{ $user->pekerjaan }}</td>
                     <td class="col-1">
                         <button class="btn btn-primary col-9 float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                            <i class="bi bi-pencil-square"></i>
+                            <i class="fa-solid fa-pen-to-square"></i>
                           </button>
                     </td>
-                    <td class="col-1"><a href="" class="btn btn-danger col-9 mx-auto"><i class="bi bi-trash3"></i></a></td>
+                    <td class="col-1"><a href="" class="btn btn-danger col-9 mx-auto"><i class="fa-solid fa-trash"></i></a></td>
                   </tr>
                   @endif
                   @endforeach
