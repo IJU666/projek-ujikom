@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,7 +42,8 @@ require __DIR__.'/auth.php';
 
 Route::get('/pengguna', function () {
     return view('data.pengguna', [
-        "title" => "Pengguna"
+        "title" => "Pengguna",
+        'users' => User::all()
     ]);
 
 })->middleware(['auth'])->name('pengguna');
