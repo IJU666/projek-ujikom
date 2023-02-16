@@ -17,7 +17,7 @@
                 <h3>Data Pengaduan</h3>
             </div>
 @endhasanyrole
-<div class="page-content">
+<div class="page-content container">
     <section class="row" >
             <form action="" method="post" class="">
                 <div class="row">
