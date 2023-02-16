@@ -34,22 +34,22 @@
                     <thead>
                       <tr class="">
                         <th scope="col">No</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Jenis Laporan</th>
                         <th scope="col">Isi Laporan</th>
                         <th scope="col">Alamat</th>
-                        <th scope="col">No Telp</th>
+                        <th scope="col">Tanggal</th>
+                        <th scope="col">Lampiran</th>
                         <th scope="col" colspan="2" class="text-center">Aksi</th>
                       </tr>
                     </thead>
                     <tbody>
+                    @foreach ($pengaduans as $pengaduan)
+                    @if ($pengaduan)
                       <tr>
-                        <th scope="row">1</th>
-                        <td>Fauzi Maulana Akbar</td>
-                        <td>Pengaduan</td>
-                        <td>Terjadi perampokan di pasar cicaheum</td>
-                        <td>Jalan pochinok duwar</td>
-                        <td>08986283764</td>
+                        <td>{{ $pengaduan->id }}</td>
+                        <td>{{ $pengaduan->isi }}</td>
+                        <td>{{ $pengaduan->alamat }}</td>
+                        <td>{{ $pengaduan->tglpengaduan }}</td>
+                        <td></td>
                         <td class="col-1">
                             <button class="btn btn-primary col-9 float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                                 <i class="fa-solid fa-eye"></i>
@@ -59,36 +59,8 @@
                         <td class="col-1"><a href="" class="btn btn-danger col-9"><i class="fa-solid fa-trash"></i></a></td>
                         @endhasanyrole
                       </tr>
-
-                      {{-- useless --}}
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>cinta sementara, epep selamanya</td>
-                        <td>08238623223</td>
-                        <td class="col-1"> <button class="btn btn-primary col-9 float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                            <i class="fa-solid fa-eye"></i>
-                          </button></td>
-                          @hasanyrole('admin|petugas')
-                          <td class="col-1"><a href="" class="btn btn-danger col-9"><i class="fa-solid fa-trash"></i></a></td>
-                          @endhasanyrole
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                        <td>epep selamanya</td>
-                        <td>08238623223</td>
-                        <td class="col-1"> <button class="btn btn-primary col-9 float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                            <i class="fa-solid fa-eye"></i>
-                          </button></td>
-                        @hasanyrole('admin|petugas')
-                        <td class="col-1"><a href="" class="btn btn-danger col-9"><i class="fa-solid fa-trash"></i></a></td>
-                        @endhasanyrole
-                      </tr>
-                      {{-- useless --}}
+                    @endif
+                    @endforeach
                     </tbody>
                   </table>
             </div>

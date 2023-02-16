@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Models\Pengaduan;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -33,7 +34,8 @@ Route::get('/tentangaspera', function () {
 
 Route::get('/pengaduan', function () {
     return view('data.pengaduan', [
-        "title" => "Pengaduan"
+        "title" => "Pengaduan",
+        'pengaduans' => Pengaduan::all()
     ]);
 
 })->middleware(['auth'])->name('pengaduan');
