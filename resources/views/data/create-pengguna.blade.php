@@ -14,35 +14,58 @@
     <h3>Tambah Pengguna</h3>
 </div>
 <div class="page-content">
-    <section class="row col-lg-6 mx-auto" >
-
-                <form action="" method="post">
-                    <div class="mb-3">
-                        <div id="laporan" class="">Nama</div>
-                        <input class="form-control" id="laporan" placeholder="Fauzi Maulana Akbar" >
+    <section class="row col-lg-10 mx-auto" >
+        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+        <form method="POST" action="{{ url('/store') }}">
+            @csrf
+              <div class=" col-lg-12 mx-auto">
+                  <div class="row mx-auto">
+                      <div class="col-lg-6">
+                          <label for="nama" class="form-text">Nama Lengkap</label>
+                          <input type="text" name="name" id="nama" class="form-control" placeholder="Masukan Nama Lengkap" :value="old('name')" required autofocus>
                       </div>
-                      <div class="row">
-                      <div class="mb-3">
-                        <label for="alamat">NIK</label>
-                        <input class="form-control" id="laporan" placeholder="320405123123120005" >
+                      <div class="col-lg-6">
+                          <label for="nik" class="form-text">Nomor Induk Kependudukan (NIK)</label>
+                          <input type="number" name="nik" id="nik" class="form-control col-lg-5" :value="old('nik')" placeholder="Masukan Nomor Induk Kependudukan" required>
                       </div>
-                      <div class="mb-3">
-                        <label for="alamat">Tanggal Lahir</label>
-                        <input type="text" name="alamat" id="" class="form-control col-lg-5" placeholder="Pengaduan" >
-
+                      <div class="col-lg-6 my-2">
+                          <label for="tglahir" class="form-text">Tanggal Lahir</label>
+                          <input type="date" name="tglahir" id="tglahir" class="form-control col-lg-5" :value="old('tglahir')" placeholder="Masukan Nomor Induk Kependudukan" required>
                       </div>
-                      <div class="mb-3">
-                        <label for="alamat">Jenis Kelamin</label>
-                        <input type="date" name="alamt" id="" class="form-control col-lg-5" >
+                      <div class="col-lg-6 my-2">
+                          <label for="jk" class="form-text">Jenis Kelamin</label>
+                          <select name="jk" id="jk" class="form-select" :value="old('jk')">
+                              <option selected>Pilih jenis kelamin</option>
+                              <option value="Laki - laki">Laki - laki</option>
+                              <option value="Perempuan">Perempuan</option>
+                          </select>
                       </div>
-                      <div class="mb-3">
-                        <label for="alamat">No Telepon</label>
-                        <input type="number" name="telepon" id="" placeholder="08571289847" class="form-control col-lg-5" >
+                      <div class="col-lg-6">
+                          <label for="notelp" class="form-text">Nomor Telepon Aktif</label>
+                          <input type="number" name="notelp" id="notelp" class="form-control col-lg-5" :value="old('notelp')" placeholder="Masukan Nomor Telepon" required>
                       </div>
-                      <div class="mb-4">
-                        <label for="alamat">Pekerjaan</label>
-                        <input type="text" class="form-control text-dark col-lg-12" placeholder="Pengusaha" >
-                    </div>
+                      @foreach ($roles as $role)
+                      <div class="col-lg-6">
+                          <label for="check-{{ $role->id }}" class="form-text">{{ $role->name }}</label>
+                          <input type="checkbox" name="role[]" id="check-{{ $role->id }}" value="{{ $role->name }}">
+                      </div>
+                      @endforeach
+                      <input type="text" name="pekerjaan" id="pekerjaan" class="form-control col-lg-5" :value="old('pekerjaan')" placeholder="Masukan Pekerjaan" required>
+                      <div class="col-lg-6 my-2">
+                          <label for="username" class="form-text">Nama Pengguna</label>
+                          <input type="text" name="username" id="username" class="form-control" :value="old('username')" placeholder="Masukan Nama Pengguna" required>
+                      </div>
+                      <div class="col-lg-6 my-2">
+                          <label for="email" class="form-text">Masukan Email Pengguna</label>
+                          <input type="email" name="email" id="email" class="form-control" :value="old('email')" placeholder="Masukan Email Aktif" required>
+                      </div>
+                      <div class="col-lg-6">
+                          <label for="password" class="form-text">Masukan Kata Sandi</label>
+                          <input type="password" name="password" id="password" class="form-control" placeholder="Masukan Kata Sandi" required>
+                      </div>
+                      <div class="col-lg-6">
+                          <label for="password_confirmation" class="form-text">Ulang Kata Sandi</label>
+                          <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" placeholder="Ulang Kata Sandi" required>
                       </div>
                       <div class="border-top border-2 py-3">
                         <button type="submit" name="submit" class="btn btn-primary float-end">Simpan</button>

@@ -5,6 +5,7 @@ use App\Models\Pengaduan;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PengaduanController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,10 @@ Route::post('/store', [PengaduanController::class, 'store']);
 Route::post('/show{id}', [PengaduanController::class, 'show']);
 Route::post('/destroy{id}', [PengaduanController::class, 'destroy']);
 
+Route::get('/pengguna', [UserController::class, 'index']);
+Route::get('/create-pengguna', [UserController::class, 'create']);
+Route::post('/store', [UserController::class, 'store']);
+
 
 Route::get('/daftar', function () {
     return view('daftar');
@@ -38,11 +43,6 @@ Route::get('/masuk', function () {
     return view('auth.login');
 });
 
-Route::get('/create-pengguna', function () {
-    return view('data.create-pengguna', [
-        "title" => 'Pengguna'
-    ]);
-});
 
 Route::get('/tentangaspera', function () {
     return view('tentangaspera', [

@@ -44,6 +44,21 @@
                     <option value="Selesai">Selesai</option>
                 </select>
             </div>
+
+            {{-- @hasanyrole('admin|petugas')
+            <div class="mb-3">
+                <textarea class="form-control" id="laporan" rows="5" placeholder="Masukan Tanggapan" ></textarea>
+              </div>
+            <div class="row">
+            <div class="col-lg-6">
+                <label for="status" class="form-text">Status Pengaduan</label>
+                <select name="status" id="status" class="form-select" >
+                    <option value="Diproses">Diproses</option>
+                    <option value="Selesai">Selesai</option>
+                </select>
+            </div>
+            @endhasanyrole --}}
+
             <div class="border-top border-3 mt-2 pt-2 offcanvas-title">
                 <button type="submit" class="btn btn-primary float-end">Simpan</button>
                 <button type="button" class="btn btn-danger float-end me-2" data-bs-dismiss="offcanvas">Close</button>
