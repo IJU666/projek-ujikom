@@ -25,9 +25,14 @@
                     </div>
                     <div class="col-lg-3">
                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#modal-pengguna">
+                        <button type="button" class="btn btn-primary float-end {{ ($title === "Cetak Pengguna") ? 'active' : ''  }}" data-bs-toggle="modal" data-bs-target="#modal-pengguna">
                             Tambah Pengguna
                         </button>
+                        @hasrole('admin')
+                        <a href="/cetakpengguna" class="btn btn-succes ">
+                            Cetak Laporan
+                        </a>
+                        @endhasrole
                     </div>
                     @include('data.modal-pengguna')
                 </div>
@@ -44,7 +49,6 @@
                     <th scope="col">Jenis Kelamin</th>
                     <th scope="col">No Telpon</th>
                     <th scope="col">Pekerjaan</th>
-                    <th scope="col" colspan="2" class="text-center">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -58,12 +62,6 @@
                     <td>{{ $user->jk }}</td>
                     <td>{{ $user->notelp }}</td>
                     <td>{{ $user->pekerjaan }}</td>
-                    <td class="col-1">
-                        <button class="btn btn-primary col-9 float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                          </button>
-                    </td>
-                    <td class="col-1"><a href="" class="btn btn-danger col-9 mx-auto"><i class="fa-solid fa-trash"></i></a></td>
                   </tr>
                   @endif
                   @endforeach

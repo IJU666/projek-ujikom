@@ -57,3 +57,21 @@ Route::get('/pengguna', function () {
 })->middleware(['auth'])->name('pengguna');
 
 require __DIR__ . '/auth.php';
+
+Route::get('/cetakpengguna', function () {
+    return view('cetak.cetakpengguna', [
+        "title" => "Cetak Pengguna",
+        'users' => User::all()
+    ]);
+})->middleware(['auth'])->name('pengguna');
+
+require __DIR__ . '/auth.php';
+
+Route::get('/cetakpengaduan', function () {
+    return view('cetak.cetakpengaduan', [
+        "title" => "Cetak Pengaduan",
+        'pengaduans' => Pengaduan::all()
+    ]);
+})->middleware(['auth'])->name('pengaduan');
+
+require __DIR__ . '/auth.php';

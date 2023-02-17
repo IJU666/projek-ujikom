@@ -28,6 +28,11 @@
                         <button type="submit" name="submit" class="btn btn-primary m-0 col-lg-12"><i class="fa-solid fa-magnifying-glass my-auto"></i></button>
                     </div>
                 </div>
+                @hasrole('admin')
+                        <a href="/cetakpengaduan" class="btn btn-succes ">
+                            Cetak Laporan
+                        </a>
+                        @endhasrole
             </form>
             <div class="rounded-3 mt-4 py-3 shadow" style="background-color: #f3f3f3;">
                 <table class="table table-striped">
