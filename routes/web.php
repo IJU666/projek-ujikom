@@ -34,6 +34,10 @@ Route::get('/daftar', function () {
     return view('daftar');
 });
 
+Route::get('/masuk', function () {
+    return view('auth.login');
+});
+
 Route::get('/tentangaspera', function () {
     return view('tentangaspera', [
         "title" => "Tentang Aspera"
