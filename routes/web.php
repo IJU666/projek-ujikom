@@ -38,6 +38,12 @@ Route::get('/masuk', function () {
     return view('auth.login');
 });
 
+Route::get('/create-pengguna', function () {
+    return view('data.create-pengguna', [
+        "title" => 'Pengguna'
+    ]);
+});
+
 Route::get('/tentangaspera', function () {
     return view('tentangaspera', [
         "title" => "Tentang Aspera"

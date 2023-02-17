@@ -11,12 +11,45 @@
             </header>
 
 <div class="page-heading">
-    <h3>Data Pengguna</h3>
+    <h3>Tambah Pengguna</h3>
 </div>
 <div class="page-content">
-    <section class="row" >
-            <form action="" method="post" class="">
-                <div class="row">
+    <section class="row col-lg-6 mx-auto" >
+
+                <form action="" method="post">
+                    <div class="mb-3">
+                        <div id="laporan" class="">Nama</div>
+                        <input class="form-control" id="laporan" placeholder="Fauzi Maulana Akbar" >
+                      </div>
+                      <div class="row">
+                      <div class="mb-3">
+                        <label for="alamat">NIK</label>
+                        <input class="form-control" id="laporan" placeholder="320405123123120005" >
+                      </div>
+                      <div class="mb-3">
+                        <label for="alamat">Tanggal Lahir</label>
+                        <input type="text" name="alamat" id="" class="form-control col-lg-5" placeholder="Pengaduan" >
+
+                      </div>
+                      <div class="mb-3">
+                        <label for="alamat">Jenis Kelamin</label>
+                        <input type="date" name="alamt" id="" class="form-control col-lg-5" >
+                      </div>
+                      <div class="mb-3">
+                        <label for="alamat">No Telepon</label>
+                        <input type="number" name="telepon" id="" placeholder="08571289847" class="form-control col-lg-5" >
+                      </div>
+                      <div class="mb-4">
+                        <label for="alamat">Pekerjaan</label>
+                        <input type="text" class="form-control text-dark col-lg-12" placeholder="Pengusaha" >
+                    </div>
+                      </div>
+                      <div class="border-top border-2 py-3">
+                        <button type="submit" name="submit" class="btn btn-primary float-end">Simpan</button>
+                        <button type="submit" class="btn btn-danger float-end mx-2" data-bs-dismiss="offcanvas" aria-label="Close">Batal</button>
+                      </div>
+                </form>
+                {{-- <div class="row">
                     <div class="col-lg-4">
                         <input type="text" name="cari" id="" placeholder="Masukan Nama Pengguna" class="form-control">
                     </div>
@@ -32,9 +65,9 @@
                     </div>
                         @endhasrole
                        <div class="col-lg-6 ">
-                        <a href="/create-pengguna" class="btn btn-primary {{ ($title === "Cetak Pengguna") ? 'active' : ''  }}" >
+                        <button type="button" class="btn btn-primary {{ ($title === "Cetak Pengguna") ? 'active' : ''  }}" data-bs-toggle="modal" data-bs-target="#modal-pengguna">
                             Tambah Pengguna
-                        </a>
+                        </button>
                     </div>
 
 
@@ -72,7 +105,7 @@
                 </tbody>
               </table>
 
-            </div>
+            </div> --}}
             {{-- <div>
                 {{ $users->links() }}
             </div> --}}

@@ -58,7 +58,7 @@
 
             <div class=" col-lg-6 my-5 mx-auto justify-end">
                 <x-button class="ml-3 btn btn-primary col-lg-12">
-                    {{ __('Log in') }}
+                    {{ __('Masuk') }}
                 </x-button>
             </div>
         </form>
