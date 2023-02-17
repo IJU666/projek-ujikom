@@ -34,12 +34,12 @@
         <div class=" my-2 border-bottom border-3 col-lg-3 mx-auto">Tanggapan</div>
         <form action="" method="post">
             <div class="mb-3">
-                <textarea class="form-control" id="laporan" rows="5" placeholder="Masukan Tanggapan"></textarea>
+                <textarea class="form-control" id="laporan" rows="5" placeholder="Masukan Tanggapan" disabled></textarea>
               </div>
             <div class="row">
             <div class="col-lg-6">
                 <label for="status" class="form-text">Status Pengaduan</label>
-                <select name="status" id="status" class="form-select" >
+                <select name="status" id="status" class="form-select" disabled>
                     <option value="Diproses">Diproses</option>
                     <option value="Selesai">Selesai</option>
                 </select>
