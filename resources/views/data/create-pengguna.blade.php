@@ -44,13 +44,11 @@
                           <label for="notelp" class="form-text">Nomor Telepon Aktif</label>
                           <input type="number" name="notelp" id="notelp" class="form-control col-lg-5" :value="old('notelp')" placeholder="Masukan Nomor Telepon" required>
                       </div>
-                      @foreach ($roles as $role)
-                      <div class="col-lg-6">
-                          <label for="check-{{ $role->id }}" class="form-text">{{ $role->name }}</label>
-                          <input type="checkbox" name="role[]" id="check-{{ $role->id }}" value="{{ $role->name }}">
-                      </div>
-                      @endforeach
+
+                    <div class="col-lg-6">
+                        <label for="pekerjaan" class="form-text">Pekerjaan</label>
                       <input type="text" name="pekerjaan" id="pekerjaan" class="form-control col-lg-5" :value="old('pekerjaan')" placeholder="Masukan Pekerjaan" required>
+                    </div>
                       <div class="col-lg-6 my-2">
                           <label for="username" class="form-text">Nama Pengguna</label>
                           <input type="text" name="username" id="username" class="form-control" :value="old('username')" placeholder="Masukan Nama Pengguna" required>
@@ -66,6 +64,13 @@
                       <div class="col-lg-6">
                           <label for="password_confirmation" class="form-text">Ulang Kata Sandi</label>
                           <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" placeholder="Ulang Kata Sandi" required>
+                      </div>
+                      <div class="col-lg-6 my-2">
+                        <label for="check" class="form-text">Role</label><br>
+                        @foreach ($roles as $role)
+                            <label for="check-{{ $role->id }}" class="form-text">{{ $role->name }}</label>
+                            <input type="checkbox" name="role[]" class="btn" id="check-{{ $role->id }}" value="{{ $role->name }}">
+                        @endforeach
                       </div>
                       <div class="border-top border-2 py-3">
                         <button type="submit" name="submit" class="btn btn-primary float-end">Simpan</button>
