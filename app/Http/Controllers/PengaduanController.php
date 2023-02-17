@@ -39,8 +39,21 @@ class PengaduanController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->except(['_token']);
-        Pengaduan::insert($data);
+        // $data = $request->except(['_token']);
+        // Pengaduan::insert($data);
+
+        $data = $request->validate([
+            "jenis" => "required",
+            "isi" => "required",
+            "alamat" => "required",
+            "kirim" => "required",
+            "tglpengaduan" => "required",
+            "lampiran" => "image|file|mimes:jpeg,png,jpg|max:20000"
+        ]);
+        if ($request->file('lampiran')) {
+            $data['lampiran'] = $request->file('lampiran')->store('post-image');
+        }
+        Pengaduan::create($data);
         return redirect('/beranda');
     }
 
