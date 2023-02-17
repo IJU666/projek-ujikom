@@ -16,7 +16,7 @@
 <div class="page-content">
     <section class="row col-lg-10 mx-auto" >
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
-        <form method="POST" action="{{ url('/store') }}">
+        <form method="POST" action="{{ url('/up') }}">
             @csrf
               <div class=" col-lg-12 mx-auto">
                   <div class="row mx-auto">

@@ -32,7 +32,7 @@ Route::post('/destroy{id}', [PengaduanController::class, 'destroy']);
 
 Route::get('/pengguna', [UserController::class, 'index']);
 Route::get('/create-pengguna', [UserController::class, 'create']);
-Route::post('/store', [UserController::class, 'store']);
+Route::post('/up', [UserController::class, 'store']);
 
 
 Route::get('/daftar', function () {

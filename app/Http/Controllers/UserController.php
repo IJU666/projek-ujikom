@@ -6,7 +6,6 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Spatie\Permission\Models\Role;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 
@@ -69,14 +68,7 @@ class UserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        // assign role
         $user->assignRole($request->input('role'));
-
-        // if ($user) {
-        //     return redirect()->route('/pengguna')->with(['success' => 'Data Berhaasil Disimpan!']);
-        // } else {
-        //     return redirect()->route('/pengguna')->with(['error' => 'Data Gagal Disimpan!']);
-        // }
         return redirect('/pengguna');
     }
 
