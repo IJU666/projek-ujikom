@@ -20,24 +20,28 @@
                     <div class="col-lg-4">
                         <input type="text" name="cari" id="" placeholder="Masukan Nama Pengguna" class="form-control">
                     </div>
-                    <div class="col-lg-5">
-                        <button type="submit" name="submit" class="btn btn-primary m-0 col-lg-2"><i class="fa-solid fa-magnifying-glass my-auto"></i></i></button>
+                    <div class="col-lg-3 ">
+                        <button type="submit" name="submit" class="btn btn-primary m-0 col-lg-3"><i class="fa-solid fa-magnifying-glass my-auto"></i></i></button>
                     </div>
-                    <div class="col-lg-3">
-                       <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary float-end {{ ($title === "Cetak Pengguna") ? 'active' : ''  }}" data-bs-toggle="modal" data-bs-target="#modal-pengguna">
-                            Tambah Pengguna
-                        </button>
+                    <div class="col-lg-5 row ">
                         @hasrole('admin')
-                        <a href="/cetakpengguna" class="btn btn-succes ">
+                        <div class="col-lg-6 ">
+                        <a href="/cetakpengguna" class="btn btn-outline-primary float-end ">
                             Cetak Laporan
                         </a>
-                        @endhasrole
                     </div>
-                    @include('data.modal-pengguna')
+                        @endhasrole
+                       <div class="col-lg-6 ">
+                        <button type="button" class="btn btn-primary {{ ($title === "Cetak Pengguna") ? 'active' : ''  }}" data-bs-toggle="modal" data-bs-target="#modal-pengguna">
+                            Tambah Pengguna
+                        </button>
+                    </div>
+
+
+                    </div>
                 </div>
             </form>
-            <div class="rounded-3 mt-4 py-3 shadow shadow-md" style="background-color: #f3f3f3;">
+            <div class="rounded-3 mt-4 py-3 shadow" style="background-color: #f3f3f3;">
 
               <table class="table table-striped">
                 <thead>
@@ -74,9 +78,6 @@
             </div> --}}
     </section>
 </div>
-
-@include('data.offcanvas-pengguna')
-
             <footer class="">
 
             </footer>

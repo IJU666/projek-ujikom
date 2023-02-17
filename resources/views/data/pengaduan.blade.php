@@ -27,24 +27,28 @@
                     <div class="col-lg-1 ">
                         <button type="submit" name="submit" class="btn btn-primary m-0 col-lg-12"><i class="fa-solid fa-magnifying-glass my-auto"></i></button>
                     </div>
-                </div>
+
                 @hasrole('admin')
-                        <a href="/cetakpengaduan" class="btn btn-succes ">
+                <div class=" col-lg-7">
+                        <a href="/cetakpengaduan" class="btn btn-outline-primary float-end ">
                             Cetak Laporan
                         </a>
+                    </div>
                         @endhasrole
+                    </div>
             </form>
             <div class="rounded-3 mt-4 py-3 shadow" style="background-color: #f3f3f3;">
                 <table class="table table-striped">
                     <thead>
                       <tr class="">
                         <th scope="col">No</th>
-                        <th scope="col">Isi Laporan</th>
+                        <th scope="col" class="col-lg-2">Jenis Laporan</th>
+                        <th scope="col" class="col-lg-2">Isi Laporan</th>
                         <th scope="col">Alamat</th>
-                        <th scope="col">Tanggal</th>
-                        <th scope="col">Asal Pelapor</th>
-                        <th scope="col">Lampiran</th>
-                        <th scope="col" colspan="2">Aksi</th>
+                        <th scope="col" class="col-lg-2">Tanggal</th>
+                        <th scope="col" class="col-lg-2">Asal Pelapor</th>
+                        <th scope="col" class="text-center">Lampiran</th>
+                        <th scope="col">Aksi</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -52,16 +56,19 @@
                     @if ($pengaduan)
                       <tr>
                         <td>{{ $pengaduan->id }}</td>
+                        <td>{{ $pengaduan->jenis }}</td>
                         <td>{{ $pengaduan->isi }}</td>
                         <td>{{ $pengaduan->alamat }}</td>
                         <td>{{ $pengaduan->tglpengaduan }}</td>
                         <td>{{ $pengaduan->kirim }}</td>
-                        <td>{{ $pengaduan->lampiran }}</td>
-                        <td></td>
+                        <td class="text-center"><img src="{{ asset('/storage/' . $pengaduan->lampiran) }}" class="col-lg-12" alt=""></td>
                         <td class="col-1">
-                            <a class="btn btn-primary col-9 " href="{{ $pengaduan->id }}" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                            <button type="button" class="btn btn-primary col-9" href="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling{{ $pengaduan->id }}" aria-controls="offcanvasScrolling">
                                 <i class="fa-solid fa-eye"></i>
-                            </a>
+                            </button>
+                        </td>
+                        <td>@include('data.offcanvas')</td>
+                        <td>
                         </td>
                       </tr>
                     @endif
@@ -72,7 +79,6 @@
     </section>
 </div>
 
-@include('data.offcanvas')
 
             <footer class="">
 

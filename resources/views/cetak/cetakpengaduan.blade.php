@@ -8,7 +8,7 @@
         <th scope="col">Isi Laporan</th>
         <th scope="col">Alamat</th>
         <th scope="col">Tanggal</th>
-        <th scope="col">Asal Pelapor</th>
+        <th scope="col" class="col-lg-2">Asal Pelapor</th>
         <th scope="col">Lampiran</th>
       </tr>
     </thead>
@@ -21,7 +21,7 @@
             <td>{{ $pengaduan->alamat }}</td>
             <td>{{ $pengaduan->tglpengaduan }}</td>
             <td>{{ $pengaduan->kirim }}</td>
-            <td>{{ $pengaduan->lampiran }}</td>
+            <td><img src="{{ asset('/storage/' . $pengaduan->lampiran) }}" width="200px" alt=""></td>
         @endif
         @endforeach
     </tbody>
