@@ -63,9 +63,17 @@
                         <td>{{ $pengaduan->kirim }}</td>
                         <td class="text-center"><img src="{{ asset('/storage/' . $pengaduan->lampiran) }}" class="col-lg-12" alt=""></td>
                         <td class="col-1">
+                            @hasrole('masyarakat')
                             <button type="button" class="btn btn-primary col-9" href="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling{{ $pengaduan->id }}" aria-controls="offcanvasScrolling">
                                 <i class="fa-solid fa-eye"></i>
                             </button>
+                            @endhasrole
+
+                            @hasanyrole('admin|petugas')
+                            <button type="button" class="btn btn-primary col-9" href="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling{{ $pengaduan->id }}" aria-controls="offcanvasScrolling">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            @endhasrole
                         </td>
                         <td>@include('data.offcanvas')</td>
                         <td>

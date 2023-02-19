@@ -52,7 +52,7 @@
         @endhasrole
 
         @hasanyrole('admin|petugas')
-        <form action="{{ url('/pusing') }}" method="post">
+        <form action="{{ url('/tanggap') }}" method="post">
             @csrf
             <div class="mb-3">
                 <textarea class="form-control" name="tanggapan" id="laporan" rows="5" placeholder="Masukan Tanggapan"></textarea>

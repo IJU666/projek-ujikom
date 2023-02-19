@@ -5,6 +5,7 @@ use App\Models\Pengaduan;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PengaduanController;
+use App\Http\Controllers\TanggapanController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -33,6 +34,8 @@ Route::post('/destroy{id}', [PengaduanController::class, 'destroy']);
 Route::get('/pengguna', [UserController::class, 'index']);
 Route::get('/create-pengguna', [UserController::class, 'create']);
 Route::post('/up', [UserController::class, 'store']);
+
+Route::post('/tanggap', [TanggapanController::class, 'store']);
 
 
 Route::get('/daftar', function () {
